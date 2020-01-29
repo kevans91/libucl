@@ -289,7 +289,14 @@ as following:
 
 By default, the priority of top-level object is set to zero (lowest priority). Currently,
 you can define up to 16 priorities (from 0 to 15). Includes with bigger priorities will
-rewrite keys from the objects with lower priorities as specified by the policy.
+rewrite keys from the objects with lower priorities as specified by the policy. The priority
+of the top-level object can be changed with the `.priority` macro, which has no
+options and takes the new priority:
+
+```
+.priority 5
+.include "path.conf"
+```
 
 ### Variables support
 
